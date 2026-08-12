@@ -673,4 +673,4 @@ export const PRODUCTS: Product[] = [
   }
 ];
 
-export const FREE_SHIPPING_THRESHOLD = 250.00; // R$ 250,00 para frete grátis
+export const FREE_SHIPPING_THRESHOLD = Number.POSITIVE_INFINITY;

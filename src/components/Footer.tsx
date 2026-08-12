@@ -45,7 +45,6 @@ export default function Footer({ onOpenSecurityModal }: FooterProps) {
               <li>📦 Correios Mini Envios & SEDEX</li>
               <li>🛵 Uber Flash / Motoboy em Palmas/TO</li>
               <li>📍 Taquaralto, Aurenys & Plano Diretor</li>
-              <li>✨ Frete Grátis acima de R$ 250,00</li>
               <li>🛡️ 1 Ano de Garantia com Certificado</li>
             </ul>
           </div>

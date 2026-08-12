@@ -47,9 +47,9 @@ export default function Header({
       <div className="gold-gradient-bg text-white text-[11px] md:text-xs font-medium py-1.5 px-4 text-center tracking-wider flex items-center justify-center gap-2 flex-wrap">
         <span>✨ FLOR DE MENINA (@flordemenina__to)</span>
         <span className="hidden md:inline">•</span>
-        <span>FRETE GRÁTIS R$ 250+</span>
-        <span className="hidden md:inline">•</span>
         <span>1 Ano de Garantia no Banho</span>
+        <span className="hidden md:inline">•</span>
+        <span>Entrega em Palmas/TO e Brasil</span>
         <span className="hidden md:inline">•</span>
         <span>Até 6x Sem Juros ou 5% OFF Pix</span>
       </div>

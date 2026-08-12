@@ -115,13 +115,13 @@ export default function Home() {
         {/* Catalog Section Title & Filter */}
         <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-[#e7e0d3] pb-6 gap-4">
           <div>
-            <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#9b7237]">
+            <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-[#9b7237]">
               <Sparkles className="w-4 h-4 text-[#9b7237]" /> Coleção Flor de Menina
             </div>
-            <h2 className="font-serif text-3xl font-normal text-[#1c1917] mt-1">
-              {selectedCategory === 'Todos' ? 'Catálogo Completo de Semijoias' : `Coleção de ${selectedCategory}`}
+            <h2 className="mt-2 font-serif text-3xl font-normal text-[#1c1917] md:text-4xl">
+              {selectedCategory === 'Todos' ? 'Peças que encantam em cada detalhe' : `Coleção de ${selectedCategory}`}
             </h2>
-            <p className="text-xs text-[#78716c] mt-1">
+            <p className="mt-2 text-xs text-[#78716c] md:text-sm">
               {PRODUCTS.length} peças exclusivas banhadas a Ouro 18k e Prata 925 com 1 Ano de Garantia e tecnologia antialérgica.
             </p>
           </div>

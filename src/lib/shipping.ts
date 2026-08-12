@@ -1,5 +1,4 @@
 import { AddressInfo, ShippingOption } from './types';
-import { FREE_SHIPPING_THRESHOLD } from './products';
 import {
   SHIPPING_ORIGIN_CEP,
   DEFAULT_PACKAGE,
@@ -261,7 +260,6 @@ export async function fetchMelhorEnvioRates(
     }
 
     const quotes: MelhorEnvioQuote[] = await response.json();
-    const isFreeShipping = subtotal >= FREE_SHIPPING_THRESHOLD;
     const options: ShippingOption[] = [];
     const seenCodes = new Set<string>();
 
@@ -280,7 +278,7 @@ export async function fetchMelhorEnvioRates(
         code,
         name: `${quote.company?.name || 'Correios'} ${quote.name}`.trim(),
         description: 'Cotação em tempo real via Melhor Envio',
-        price: isFreeShipping && code !== 'SEDEX' ? 0 : Math.round(rawPrice * 100) / 100,
+        price: Math.round(rawPrice * 100) / 100,
         deliveryDays,
         carrierLogo: CARRIER_LOGOS[code],
         isLiveQuote: true,
@@ -351,7 +349,6 @@ export function calculateShippingOptions(
   liveCorreios?: LiveCorreiosRates | null,
   melhorEnvioOptions?: ShippingOption[] | null
 ): ShippingOption[] {
-  const isFreeShippingAvailable = subtotal >= FREE_SHIPPING_THRESHOLD;
   const isPalmasRegion = uf.toUpperCase() === 'TO' || city.toLowerCase().includes('palmas');
   const cleanCepNumber = rawCep ? parseInt(rawCep.replace(/\D/g, ''), 10) : 0;
 
@@ -379,7 +376,7 @@ export function calculateShippingOptions(
         description: hasLiveRates && liveCorreios?.miniPrice
           ? 'Cotação em tempo real dos Correios'
           : 'Valor estimado — tabela de referência Correios',
-        price: isFreeShippingAvailable ? 0 : Math.round(miniPrice * 100) / 100,
+        price: Math.round(miniPrice * 100) / 100,
         deliveryDays: miniDays,
         carrierLogo: '📦',
         isLiveQuote: !!(hasLiveRates && liveCorreios?.miniPrice),
@@ -390,7 +387,7 @@ export function calculateShippingOptions(
         description: hasLiveRates && liveCorreios?.pacPrice
           ? 'Cotação em tempo real dos Correios'
           : 'Valor estimado — tabela de referência Correios',
-        price: isFreeShippingAvailable ? 0 : Math.round(pacPrice * 100) / 100,
+        price: Math.round(pacPrice * 100) / 100,
         deliveryDays: pacDays,
         carrierLogo: '🟡',
         isLiveQuote: !!(hasLiveRates && liveCorreios?.pacPrice),
@@ -412,13 +409,12 @@ export function calculateShippingOptions(
   // Entrega local em Palmas-TO
   if (isPalmasRegion) {
     const palmasApp = getPalmasAppDeliveryRate(cleanCepNumber);
-    const finalLocalPrice = isFreeShippingAvailable ? 0 : palmasApp.price;
 
     options.unshift({
       code: 'MOTOBOY_LOCAL',
       name: `Uber Flash / Motoboy (${palmasApp.zoneName})`,
       description: `Entrega rápida em Palmas • ${palmasApp.estTime}`,
-      price: finalLocalPrice,
+      price: palmasApp.price,
       deliveryDays: 0,
       carrierLogo: '🛵',
       isLocalPickup: true,

@@ -2,8 +2,7 @@
 
 import React from 'react';
 import { CartItem, ShippingOption } from '@/lib/types';
-import { FREE_SHIPPING_THRESHOLD } from '@/lib/products';
-import { X, Trash2, ShoppingBag, Truck, Lock, ArrowRight, Sparkles } from 'lucide-react';
+import { X, Trash2, ShoppingBag, Truck, Lock, ArrowRight } from 'lucide-react';
 
 interface DrawerCartProps {
   isOpen: boolean;
@@ -34,10 +33,6 @@ export default function DrawerCart({
   const shippingCost = selectedShipping ? selectedShipping.price : 0;
   const grandTotal = subtotal + shippingCost;
 
-  // Free shipping math
-  const remainingForFreeShipping = Math.max(0, FREE_SHIPPING_THRESHOLD - subtotal);
-  const freeShippingProgress = Math.min(100, (subtotal / FREE_SHIPPING_THRESHOLD) * 100);
-
   return (
     <div className="fixed inset-0 z-50 overflow-hidden bg-black/50 backdrop-blur-xs">
       <div className="absolute inset-y-0 right-0 max-w-full flex pl-10">
@@ -60,28 +55,10 @@ export default function DrawerCart({
             </button>
           </div>
 
-          {/* Dynamic Free Shipping Progress Bar */}
-          <div className="bg-[#f5efe6] p-4 border-b border-[#e7e0d3] space-y-2">
-            <div className="flex items-center justify-between text-xs">
-              <span className="font-semibold text-[#1c1917] flex items-center gap-1">
-                <Truck className="w-4 h-4 text-[#9b7237]" />
-                {remainingForFreeShipping > 0 ? (
-                  <>Falta <strong className="text-[#9b7237]">R$ {remainingForFreeShipping.toFixed(2).replace('.', ',')}</strong> para Frete Grátis!</>
-                ) : (
-                  <span className="text-emerald-700 font-bold flex items-center gap-1">
-                    <Sparkles className="w-3.5 h-3.5" /> Parabéns! Você GANHOU FRETE GRÁTIS!
-                  </span>
-                )}
-              </span>
-              <span className="text-[11px] text-[#78716c] font-medium">{freeShippingProgress.toFixed(0)}%</span>
-            </div>
-
-            {/* Progress Bar Container */}
-            <div className="w-full h-2.5 bg-white rounded-full overflow-hidden border border-[#e7e0d3]">
-              <div
-                className="h-full gold-gradient-bg transition-all duration-500 rounded-full"
-                style={{ width: `${freeShippingProgress}%` }}
-              />
+          <div className="bg-[#f5efe6] p-4 border-b border-[#e7e0d3]">
+            <div className="flex items-center gap-2 text-xs font-semibold text-[#1c1917]">
+              <Truck className="w-4 h-4 text-[#9b7237]" />
+              Frete calculado conforme a sua região de entrega.
             </div>
           </div>
 
@@ -180,9 +157,7 @@ export default function DrawerCart({
                   <span>Modalidade de Envio:</span>
                   <span className="font-semibold text-[#1c1917]">
                     {selectedShipping
-                      ? selectedShipping.price === 0
-                        ? 'Frete Grátis'
-                        : `R$ ${selectedShipping.price.toFixed(2).replace('.', ',')}`
+                      ? `R$ ${selectedShipping.price.toFixed(2).replace('.', ',')}`
                       : 'A calcular'}
                   </span>
                 </div>

@@ -18,57 +18,58 @@ export default function ProductCard({ product, onSelectProduct, onAddToCart }: P
   const [imgSrc, setImgSrc] = useState(product.images[0]);
 
   return (
-    <div className="group bg-white rounded-xl overflow-hidden border border-[#e7e0d3] hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+    <div className="group flex h-full flex-col justify-between overflow-hidden rounded-[24px] border border-[#eadfce] bg-white/90 shadow-[0_20px_50px_-28px_rgba(116,89,52,0.45)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_-24px_rgba(116,89,52,0.55)]">
       <div>
-        {/* Product Image Box */}
-        <div className="relative aspect-square overflow-hidden bg-[#f5efe6] cursor-pointer" onClick={() => onSelectProduct(product)}>
+        <div
+          className="relative aspect-[4/4.7] cursor-pointer overflow-hidden bg-[#f5efe6]"
+          onClick={() => onSelectProduct(product)}
+        >
           <img
             src={imgSrc}
             alt={product.title}
             onError={() => setImgSrc(FALLBACK_IMAGE)}
-            className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
 
-          {/* Badges Overlay */}
-          <div className="absolute top-3 left-3 flex flex-col gap-1 z-10">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-white/10" />
+
+          <div className="absolute left-3 top-3 z-10 flex flex-col gap-1.5">
             {defaultVariation.promotionalPrice && (
-              <span className="bg-[#9b7237] text-white text-[10px] font-bold px-2 py-0.5 rounded-full tracking-wider uppercase">
-                OFERTA
+              <span className="rounded-full bg-[#9b7237] px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.2em] text-white shadow-sm">
+                Oferta
               </span>
             )}
-            <span className="bg-white/90 backdrop-blur-xs text-[#1c1917] text-[10px] font-semibold px-2 py-0.5 rounded-full border border-[#e7e0d3]">
+            <span className="rounded-full border border-white/70 bg-white/80 px-2.5 py-1 text-[9px] font-semibold text-[#1c1917] backdrop-blur-sm">
               {defaultVariation.platingLabel}
             </span>
           </div>
 
-          <div className="absolute top-3 right-3 z-10">
-            <span className="flex items-center gap-1 bg-[#1c1917]/80 text-white text-[10px] px-2 py-0.5 rounded-full">
-              <ShieldCheck className="w-3 h-3 text-[#d4af37]" /> 1 Ano Gar.
+          <div className="absolute right-3 top-3 z-10">
+            <span className="flex items-center gap-1 rounded-full bg-[#1c1917]/80 px-2 py-1 text-[9px] font-medium text-white">
+              <ShieldCheck className="h-3 w-3 text-[#d4af37]" /> 1 Ano Gar.
             </span>
           </div>
 
-          {/* Quick Hover Action Overlay */}
-          <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 onSelectProduct(product);
               }}
-              className="bg-white text-[#1c1917] px-4 py-2 rounded-full text-xs font-semibold shadow-md flex items-center gap-1.5 hover:bg-[#9b7237] hover:text-white transition"
+              className="flex items-center gap-1.5 rounded-full bg-white px-4 py-2 text-[11px] font-semibold text-[#1c1917] shadow-lg transition hover:bg-[#9b7237] hover:text-white"
             >
-              <Eye className="w-3.5 h-3.5" /> Espiar Detalhes & Zoom
+              <Eye className="h-3.5 w-3.5" /> Ver detalhes
             </button>
           </div>
         </div>
 
-        {/* Product Meta Info */}
-        <div className="p-4 space-y-2">
-          <div className="flex items-center justify-between text-xs text-[#78716c]">
-            <span className="uppercase tracking-widest text-[10px] font-medium text-[#9b7237] flex items-center gap-1">
-              <Sparkles className="w-3 h-3" /> {product.category}
+        <div className="space-y-3 p-4">
+          <div className="flex items-center justify-between gap-2 text-[10px] text-[#78716c]">
+            <span className="flex items-center gap-1.5 font-semibold uppercase tracking-[0.22em] text-[#9b7237]">
+              <Sparkles className="h-3 w-3" /> {product.category}
             </span>
             <div className="flex items-center gap-1">
-              <Star className="w-3 h-3 fill-[#d4af37] text-[#d4af37]" />
+              <Star className="h-3 w-3 fill-[#d4af37] text-[#d4af37]" />
               <span className="font-semibold text-[#1c1917]">{product.rating}</span>
               <span>({product.reviewsCount})</span>
             </div>
@@ -76,22 +77,21 @@ export default function ProductCard({ product, onSelectProduct, onAddToCart }: P
 
           <h3
             onClick={() => onSelectProduct(product)}
-            className="font-serif text-base font-normal text-[#1c1917] line-clamp-1 cursor-pointer hover:text-[#9b7237] transition"
+            className="cursor-pointer font-serif text-[1.05rem] leading-snug text-[#1c1917] transition hover:text-[#9b7237]"
           >
             {product.title}
           </h3>
 
-          {/* Plating Pills */}
-          <div className="flex items-center gap-1.5 pt-1">
+          <div className="flex flex-wrap items-center gap-1.5">
             {product.variations.map((v) => (
               <span
                 key={v.id}
-                className={`text-[9px] px-2 py-0.5 rounded-md border font-medium ${
+                className={`rounded-full border px-2 py-0.5 text-[9px] font-medium ${
                   v.plating === 'OURO_18K'
-                    ? 'bg-[#fef9c3] text-[#854d0e] border-[#fde047]'
+                    ? 'border-[#f4d76a] bg-[#fff7d1] text-[#8a5d18]'
                     : v.plating === 'PRATA_925'
-                    ? 'bg-[#f1f5f9] text-[#334155] border-[#cbd5e1]'
-                    : 'bg-[#fafafa] text-[#27272a] border-[#e4e4e7]'
+                    ? 'border-[#d7e4f0] bg-[#f3f8fd] text-[#334155]'
+                    : 'border-[#eceae8] bg-[#fafaf9] text-[#27272a]'
                 }`}
               >
                 {v.plating === 'OURO_18K' ? 'Ouro 18k' : v.plating === 'PRATA_925' ? 'Prata 925' : 'Ródio'}
@@ -99,30 +99,30 @@ export default function ProductCard({ product, onSelectProduct, onAddToCart }: P
             ))}
           </div>
 
-          {/* Price */}
-          <div className="pt-2 flex items-baseline gap-2">
-            <span className="text-lg font-bold text-[#1c1917]">
-              R$ {currentPrice.toFixed(2).replace('.', ',')}
-            </span>
-            {defaultVariation.promotionalPrice && (
-              <span className="text-xs text-[#78716c] line-through">
-                R$ {defaultVariation.price.toFixed(2).replace('.', ',')}
+          <div className="pt-1">
+            <div className="flex items-end gap-2">
+              <span className="text-xl font-bold text-[#1c1917]">
+                R$ {currentPrice.toFixed(2).replace('.', ',')}
               </span>
-            )}
-            <span className="text-[10px] text-[#9b7237] font-semibold ml-auto">
+              {defaultVariation.promotionalPrice && (
+                <span className="text-xs text-[#78716c] line-through">
+                  R$ {defaultVariation.price.toFixed(2).replace('.', ',')}
+                </span>
+              )}
+            </div>
+            <div className="mt-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#9b7237]">
               ou 6x R$ {(currentPrice / 6).toFixed(2).replace('.', ',')}
-            </span>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Add to Cart CTA */}
       <div className="p-4 pt-0">
         <button
           onClick={() => onAddToCart(product, defaultVariation)}
-          className="w-full py-2.5 bg-[#f5efe6] text-[#1c1917] font-medium text-xs tracking-wider uppercase rounded-lg hover:bg-[#9b7237] hover:text-white transition flex items-center justify-center gap-2 group-hover:shadow-xs cursor-pointer"
+          className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#f5efe6] px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#1c1917] transition hover:bg-[#9b7237] hover:text-white"
         >
-          <ShoppingBag className="w-4 h-4" /> Adicionar ao Carrinho
+          <ShoppingBag className="h-4 w-4" /> Adicionar
         </button>
       </div>
     </div>

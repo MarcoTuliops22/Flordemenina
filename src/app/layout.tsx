@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Flor de Menina | Semijoias Finas & Elegância',
-  description: 'Loja de semijoias exclusivas banhadas a Ouro 18k e Prata 925 com 1 Ano de Garantia e tecnologia antialérgica. Frete Grátis e entrega rápida em Palmas/TO e todo o Brasil.',
+  description: 'Loja de semijoias exclusivas banhadas a Ouro 18k e Prata 925 com 1 Ano de Garantia e tecnologia antialérgica. Entrega rápida em Palmas/TO e todo o Brasil.',
   keywords: ['semijoias', 'ouro 18k', 'prata 925', 'brincos', 'colares', 'anéis', 'palmas tocantins', 'flor de menina'],
   authors: [{ name: 'Flor de Menina Semijoias' }],
   openGraph: {
