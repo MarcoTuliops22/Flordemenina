@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, MapPin, ShieldCheck, Heart } from 'lucide-react';
+import { Instagram, MapPin, ShieldCheck, Heart, Sparkles } from 'lucide-react';
 
 interface FooterProps {
   onOpenSecurityModal: () => void;
@@ -17,11 +17,12 @@ export default function Footer({ onOpenSecurityModal }: FooterProps) {
             <span className="font-serif text-2xl tracking-widest text-[#d4af37]">FLOR DE MENINA</span>
             <p className="text-xs text-[#a8a29e] leading-relaxed">
               Semijoias exclusivas com tripla camada de banho em Ouro 18k e Prata 925. 
-              Tecnologia alemã antialérgica e garantia de 1 ano.
+              Tecnologia alemã antialérgica e garantia de 1 ano. 
+              Inspirado no perfil oficial <a href="https://www.instagram.com/flordemenina__to/" target="_blank" rel="noopener noreferrer" className="text-[#d4af37] underline">@flordemenina__to</a>.
             </p>
             <div className="flex items-center gap-2 pt-1 text-xs text-[#d4af37]">
               <MapPin className="w-4 h-4" />
-              <span>Showroom em Palmas - TO</span>
+              <span>Palmas - Tocantins (TO)</span>
             </div>
           </div>
 
@@ -29,10 +30,11 @@ export default function Footer({ onOpenSecurityModal }: FooterProps) {
           <div className="space-y-3">
             <h4 className="font-serif text-sm uppercase tracking-wider text-[#d4af37]">Coleções</h4>
             <ul className="text-xs text-[#a8a29e] space-y-2">
-              <li><a href="#brincos" className="hover:text-white transition">Brincos Banhados</a></li>
-              <li><a href="#colares" className="hover:text-white transition">Colares & Gargantilhas</a></li>
-              <li><a href="#aneis" className="hover:text-white transition">Anéis Solitários</a></li>
-              <li><a href="#pulseiras" className="hover:text-white transition">Pulseiras Riviera</a></li>
+              <li><a href="#catalog" className="hover:text-white transition">Brincos Cravejados</a></li>
+              <li><a href="#catalog" className="hover:text-white transition">Colares & Chokers</a></li>
+              <li><a href="#catalog" className="hover:text-white transition">Anéis Solitários</a></li>
+              <li><a href="#catalog" className="hover:text-white transition">Pulseiras Riviera</a></li>
+              <li><a href="#catalog" className="hover:text-white transition">Conjuntos Esmeralda</a></li>
             </ul>
           </div>
 
@@ -40,22 +42,22 @@ export default function Footer({ onOpenSecurityModal }: FooterProps) {
           <div className="space-y-3">
             <h4 className="font-serif text-sm uppercase tracking-wider text-[#d4af37]">Envio & Retirada</h4>
             <ul className="text-xs text-[#a8a29e] space-y-2">
-              <li>📦 Correios Mini Envios (Caixas pequenas)</li>
-              <li>🟡 Correios PAC & 🚀 SEDEX</li>
-              <li>🚚 Transportadora Jadlog</li>
-              <li>🛵 Motoboy / Retirada em Palmas-TO</li>
-              <li>✨ Frete Grátis nas compras acima de R$ 250,00</li>
+              <li>📦 Correios Mini Envios & SEDEX</li>
+              <li>🛵 Uber Flash / Motoboy em Palmas/TO</li>
+              <li>📍 Taquaralto, Aurenys & Plano Diretor</li>
+              <li>✨ Frete Grátis acima de R$ 250,00</li>
+              <li>🛡️ 1 Ano de Garantia com Certificado</li>
             </ul>
           </div>
 
           {/* Instagram & Security Audit Trigger */}
           <div className="space-y-4">
-            <h4 className="font-serif text-sm uppercase tracking-wider text-[#d4af37]">Redes & Segurança</h4>
+            <h4 className="font-serif text-sm uppercase tracking-wider text-[#d4af37]">Siga no Instagram</h4>
             <a
               href="https://www.instagram.com/flordemenina__to/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#27272a] border border-[#44403c] text-xs text-[#d4af37] hover:bg-[#3f3f46] transition"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-pink-600 via-rose-500 to-amber-500 text-xs font-bold text-white hover:opacity-90 transition shadow-sm"
             >
               <Instagram className="w-4 h-4" /> @flordemenina__to
             </a>
@@ -63,16 +65,16 @@ export default function Footer({ onOpenSecurityModal }: FooterProps) {
             <div>
               <button
                 onClick={onOpenSecurityModal}
-                className="w-full text-left p-3 rounded-lg bg-[#27272a] border border-[#9b7237] text-xs text-white hover:bg-[#3f3f46] transition flex items-center justify-between"
+                className="w-full text-left p-3 rounded-lg bg-[#27272a] border border-[#9b7237] text-xs text-white hover:bg-[#3f3f46] transition flex items-center justify-between cursor-pointer"
               >
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-[#d4af37]" />
                   <div>
-                    <div className="font-semibold text-xs">Relatório de Auditoria</div>
+                    <div className="font-semibold text-xs">Auditoria de Segurança</div>
                     <div className="text-[10px] text-[#a8a29e]">Conformidade OWASP & PCI-DSS</div>
                   </div>
                 </div>
-                <span className="text-[10px] bg-[#9b7237] text-white font-bold px-2 py-0.5 rounded">Ver Audit</span>
+                <span className="text-[10px] bg-[#9b7237] text-white font-bold px-2 py-0.5 rounded">Audit</span>
               </button>
             </div>
           </div>
@@ -82,10 +84,10 @@ export default function Footer({ onOpenSecurityModal }: FooterProps) {
         {/* Bottom copyright & attribution */}
         <div className="pt-8 border-t border-[#27272a] flex flex-col sm:flex-row items-center justify-between text-xs text-[#78716c] gap-4">
           <div>
-            © 2026 Flor de Menina Semijoias. Todos os direitos reservados. CNPJ: 00.000.000/0001-00
+            © 2026 Flor de Menina Semijoias (@flordemenina__to). Todos os direitos reservados.
           </div>
           <div className="flex items-center gap-1 text-[11px]">
-            Desenvolvido com <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500 inline" /> sob Arquitetura de Alta Performance e Segurança.
+            Inspiração total <Sparkles className="w-3.5 h-3.5 text-[#d4af37] inline" /> @flordemenina__to • Palmas / TO
           </div>
         </div>
 
@@ -93,3 +95,4 @@ export default function Footer({ onOpenSecurityModal }: FooterProps) {
     </footer>
   );
 }
+

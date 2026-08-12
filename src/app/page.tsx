@@ -12,6 +12,7 @@ import DrawerCart from '@/components/DrawerCart';
 import FreightCalculator from '@/components/FreightCalculator';
 import TransparentCheckout from '@/components/TransparentCheckout';
 import SecurityAuditModal from '@/components/SecurityAuditModal';
+import InstagramFeed from '@/components/InstagramFeed';
 import Footer from '@/components/Footer';
 import { Sparkles, Filter, Truck } from 'lucide-react';
 

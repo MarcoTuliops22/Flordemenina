@@ -2,12 +2,12 @@ import { Product } from './types';
 
 export const PRODUCTS: Product[] = [
   // ==========================================
-  // BRINCOS
+  // BRINCOS - FLOR DE MENINA
   // ==========================================
   {
     id: 'prod-1',
     slug: 'brinco-argola-zirconia-gloria',
-    title: 'Brinco Argola Zircônia Glória',
+    title: 'Brinco Argola Zircônia Glória - Flor de Menina',
     category: 'Brincos',
     description: 'Argola delicada cravejada com zircônias de altíssimo brilho. Desenvolvida com tecnologia alemã antialérgica (livre de níquel) e tripla camada de verniz de proteção.',
     details: [
@@ -105,7 +105,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'prod-1c',
     slug: 'brinco-ear-cuff-ramos-zirconias',
-    title: 'Brinco Ear Cuff Ramos de Zircônia',
+    title: 'Brinco Ear Cuff Ramos Flor de Menina',
     category: 'Brincos',
     description: 'Ear cuff moderno que sobe pela curvatura da orelha simulando folhagens reluzentes. Não necessita de segundo furo.',
     details: [
@@ -186,12 +186,12 @@ export const PRODUCTS: Product[] = [
   },
 
   // ==========================================
-  // COLARES
+  // COLARES - FLOR DE MENINA
   // ==========================================
   {
     id: 'prod-2',
     slug: 'colar-gargantilha-ponto-de-luz-aurora',
-    title: 'Colar Ponto de Luz Aurora',
+    title: 'Colar Ponto de Luz Aurora Gota',
     category: 'Colares',
     description: 'Colar atemporal com pingente zircônia gota lapidada. A peça perfeita para compor mix elegantes no dia a dia ou eventos sofisticados.',
     details: [
@@ -311,7 +311,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'prod-2d',
     slug: 'colar-duplo-trevo-madreperola',
-    title: 'Colar Duplo Trevo Madrepérola & Zircônia',
+    title: 'Colar Duplo Trevo Madrepérola Flor de Menina',
     category: 'Colares',
     description: 'Colar com dupla corrente e pingentes de trevo inspirados na alta joalheria francesa, com madrepérola natural prensada.',
     details: [
@@ -343,7 +343,7 @@ export const PRODUCTS: Product[] = [
   },
 
   // ==========================================
-  // ANÉIS
+  // ANÉIS - FLOR DE MENINA
   // ==========================================
   {
     id: 'prod-3',
@@ -444,7 +444,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'prod-3c',
     slug: 'anel-regulavel-organico-dourado',
-    title: 'Anel Regulável Design Orgânico Fluido',
+    title: 'Anel Regulável Design Orgânico Flor de Menina',
     category: 'Anéis',
     description: 'Anel ajustável com curvas orgânicas inspiradas na arquitetura contemporânea. Adapta-se confortavelmente a qualquer dedo do aro 14 ao 22.',
     details: [
@@ -477,7 +477,7 @@ export const PRODUCTS: Product[] = [
   },
 
   // ==========================================
-  // PULSEIRAS
+  // PULSEIRAS - FLOR DE MENINA
   // ==========================================
   {
     id: 'prod-4',
@@ -593,7 +593,7 @@ export const PRODUCTS: Product[] = [
   },
 
   // ==========================================
-  // CONJUNTOS
+  // CONJUNTOS - FLOR DE MENINA
   // ==========================================
   {
     id: 'prod-5',
@@ -635,6 +635,41 @@ export const PRODUCTS: Product[] = [
     featured: true,
     rating: 5.0,
     reviewsCount: 52
+  },
+  {
+    id: 'prod-5b',
+    slug: 'conjunto-gota-esmeralda-colar-brinco',
+    title: 'Conjunto Luxo Esmeralda Fusion (Colar + Brincos)',
+    category: 'Conjuntos',
+    description: 'Conjunto deslumbrante banhado a Ouro 18k com zircônias fusion na cor verde esmeralda colombiana.',
+    details: [
+      'Colar veneciano 45cm com gota 12x16mm',
+      'Brincos gota combinantes 10x14mm',
+      'Tripla camada de verniz de proteção alemã',
+      'Garantia de 1 ano com certificado'
+    ],
+    warranty: '1 Ano de Garantia com Certificado',
+    antiAllergic: true,
+    weightGram: 36,
+    dimensionsCm: { length: 14, width: 12, height: 5 },
+    images: [
+      'https://images.unsplash.com/photo-1588444837495-c6cfeb53f32d?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=800&q=80'
+    ],
+    variations: [
+      {
+        id: 'var-5ba',
+        name: 'Ouro 18k - Esmeralda',
+        plating: 'OURO_18K',
+        platingLabel: 'Ouro 18k',
+        price: 399.90,
+        promotionalPrice: 349.90,
+        stock: 7
+      }
+    ],
+    featured: true,
+    rating: 5.0,
+    reviewsCount: 45
   }
 ];
 

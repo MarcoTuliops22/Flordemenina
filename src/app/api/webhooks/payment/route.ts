@@ -2,10 +2,15 @@ import { NextResponse } from 'next/server';
 import crypto from 'crypto';
 import { PaymentWebhookSchema } from '@/lib/schemas';
 
-// Chave secreta compartilhada para HMAC SHA-256
-const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET || 'flor_de_menina_secret_key_2026_owasp';
+// Chave secreta compartilhada para HMAC SHA-256.
+// Em produção, esta variável deve ser configurada no painel da Vercel.
+const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET;
 
 function verifySignature(payload: string, signature: string): boolean {
+  if (!WEBHOOK_SECRET) {
+    return false;
+  }
+
   try {
     const expectedSignature = crypto
       .createHmac('sha256', WEBHOOK_SECRET)

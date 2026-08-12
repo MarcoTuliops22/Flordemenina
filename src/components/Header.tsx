@@ -44,12 +44,14 @@ export default function Header({
   return (
     <header className="sticky top-0 z-40 bg-[#fdfbf7]/95 backdrop-blur-md border-b border-[#e7e0d3]">
       {/* Announcement Bar */}
-      <div className="gold-gradient-bg text-white text-[11px] md:text-xs font-medium py-1.5 px-4 text-center tracking-wider flex items-center justify-center gap-2">
-        <span>✨ FRETE GRÁTIS nas compras acima de R$ 250,00</span>
-        <span className="hidden md:inline">|</span>
-        <span className="hidden md:inline">1 Ano de Garantia no Banho</span>
-        <span className="hidden md:inline">|</span>
-        <span className="hidden md:inline">Até 6x Sem Juros ou 5% OFF no Pix</span>
+      <div className="gold-gradient-bg text-white text-[11px] md:text-xs font-medium py-1.5 px-4 text-center tracking-wider flex items-center justify-center gap-2 flex-wrap">
+        <span>✨ FLOR DE MENINA (@flordemenina__to)</span>
+        <span className="hidden md:inline">•</span>
+        <span>FRETE GRÁTIS R$ 250+</span>
+        <span className="hidden md:inline">•</span>
+        <span>1 Ano de Garantia no Banho</span>
+        <span className="hidden md:inline">•</span>
+        <span>Até 6x Sem Juros ou 5% OFF Pix</span>
       </div>
 
       {/* Main Header */}
@@ -75,7 +77,7 @@ export default function Header({
                 FLOR DE MENINA
               </span>
               <span className="block text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-[#9b7237] font-semibold text-center md:text-left">
-                Semijoias Finas & Elegância
+                Semijoias Finas • @flordemenina__to
               </span>
             </button>
           </div>
@@ -99,6 +101,9 @@ export default function Header({
                 </button>
               );
             })}
+            <a href="#instagram" className="flex items-center gap-1 text-[#9b7237] font-semibold hover:underline">
+              <Instagram className="w-3.5 h-3.5" /> IG Feed
+            </a>
             <a href="#frete" className="flex items-center gap-1 text-[#9b7237] font-semibold hover:underline">
               <MapPin className="w-3.5 h-3.5" /> Palmas-TO
             </a>
@@ -107,16 +112,16 @@ export default function Header({
           {/* Header Action Icons */}
           <div className="flex items-center space-x-4">
             
-            {/* Instagram Link */}
+            {/* Instagram Profile Badge Button */}
             <a
               href="https://www.instagram.com/flordemenina__to/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:flex items-center text-xs text-[#78716c] hover:text-[#9b7237] transition gap-1"
-              title="Siga no Instagram @flordemenina__to"
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 text-white rounded-full hover:opacity-90 transition shadow-xs cursor-pointer"
+              title="Acessar o perfil oficial @flordemenina__to no Instagram"
             >
-              <Instagram className="w-4 h-4 text-[#9b7237]" />
-              <span className="hidden lg:inline text-[11px]">@flordemenina__to</span>
+              <Instagram className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">@flordemenina__to</span>
             </a>
 
             {/* Security Audit Badge Trigger */}
