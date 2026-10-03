@@ -13,12 +13,12 @@ Este guia ensina passo a passo como colocar seu catálogo no **Supabase** para g
 
 ---
 
-## Passo 2: Executar o Script SQL (Criar Tabela e Cadastrar as 13 Peças)
+## Passo 2: Executar o Script SQL (Criar Tabela e Cadastrar as 17 Peças)
 1. No menu lateral esquerdo do Supabase, clique no ícone **SQL Editor** (ícone de terminal `>_`).
 2. Clique em **"New Query"**.
 3. Abra o arquivo [supabase_schema.sql](file:///c:/Users/PC/OneDrive/Desktop/catalogo%20flor%20de%20menina/supabase_schema.sql) que criamos na sua pasta, copie todo o conteúdo e cole no editor do Supabase.
 4. Clique no botão verde **"Run"** (ou pressione `Ctrl + Enter`).
-5. **Pronto!** A tabela `produtos` será criada com as políticas de segurança (RLS) e todas as **13 peças** já cadastradas com os preços reais que você definiu.
+5. **Pronto!** A tabela `produtos` será criada com as políticas de segurança (RLS) e todas as **17 peças** já cadastradas com os preços reais que você definiu.
 
 ---
 

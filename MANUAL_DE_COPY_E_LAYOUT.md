@@ -253,7 +253,67 @@
   * Borda ornamental perolada milgrain
   * Hipoalergênico
 * **Referência:** `REF: FM-2053-CP`
-* **Preço Sugerido:** `R$ 169,90` *(ou 3x de R$ 56,63 sem juros)*
+* **Preço Sugerido:** `R$ 298,00` *(ou 3x de R$ 99,33 sem juros)*
+
+---
+
+### PRODUTO 14 | Foto 14: Cushion Quadrado Abaulado Pavê Negro
+* **Nome Sugerido:** **Conjunto Noir Cushion Dourado**
+* **Composição:** Colar delicado em ouro 18k com pingente quadrado cushion + Brincos botão quadrado combinando.
+* **Descrição Editorial:**  
+  *O magnetismo misterioso do contraste entre o calor do ouro 18k e a intensidade do ônix negro. Com silhueta quadrada e cantos suavemente abaulados (cushion), o conjunto exibe um denso tapete de microzircônias negras lapidadas com precisão extrema e moldura polida em alto brilho.*
+* **Especificações Técnicas:**
+  * Banho em Ouro 18k com selagem protetora de alto brilho
+  * Micro Pavê de Zircônias Black Spinel / Ônix
+  * Design Cushion geométrico com borda polida
+  * Hipoalergênico e níquel-free
+* **Referência:** `REF: FM-2054-ON`
+* **Preço Sugerido:** `R$ 168,00` *(ou 3x de R$ 56,00 sem juros)*
+
+---
+
+### PRODUTO 15 | Foto 15: Mandala Circular Pavê com Borda Solar Raiada
+* **Nome Sugerido:** **Conjunto Mandala Sol Radiante**
+* **Composição:** Colar corrente veneziana box com pingente mandala solar + Brincos redondos botão pavê solar.
+* **Descrição Editorial:**  
+  *Uma celebração luminosa à energia e sofisticação do sol. O pingente e os brincos redondos trazem um centro abaulado em manta de microzircônias cristalinas, envolvido por delicadas pontas e esferas douradas em efeito raiado. Uma joia radiante para iluminar o dia a dia e celebrações.*
+* **Especificações Técnicas:**
+  * Banho nobre em Ouro 18k
+  * Micro Pavê central de zircônias incolores
+  * Moldura artística raiada estilo sol
+  * Corrente veneziana box resistente de 45 cm + extensor
+* **Referência:** `REF: FM-2055-SL`
+* **Preço Sugerido:** `R$ 158,00` *(ou 3x de R$ 52,66 sem juros)*
+
+---
+
+### PRODUTO 16 | Foto 16: Anel e Brincos Octagonais London Blue com Halo de Baguetes
+* **Nome Sugerido:** **Conjunto Octogonal London Blue Art Déco**
+* **Composição:** Anel com pedra octogonal central e ombros cravejados + Brincos octogonais com halo de baguetes.
+* **Descrição Editorial:**  
+  *Inspirado na opulência e geometria do período Art Déco e na alta joalheria palaciana. A gema central octogonal em lapidação esmeralda destaca a tonalidade hipnotizante do azul London profundo, emoldurada por uma auréola arquitetônica de zircônias baguetes e brilhantes sobre banho de ródio branco.*
+* **Especificações Técnicas:**
+  * Banho em Ródio Branco de padrão internacional
+  * Cristal nobre facetado tonalidade London Blue
+  * Halo externo composto por zircônias baguetes e brilhantes
+  * Anel anatômico de máximo conforto e brincos com tarraxa segura
+* **Referência:** `REF: FM-2056-LB`
+* **Preço Sugerido:** `R$ 189,00` *(ou 3x de R$ 63,00 sem juros)*
+
+---
+
+### PRODUTO 17 | Foto 17: Anel Solitário Oval e Brincos Topázio Swiss Blue
+* **Nome Sugerido:** **Conjunto Solitário Topázio Swiss**
+* **Composição:** Anel solitário com gema oval 4 garras + Brincos solitários ovais 4 garras.
+* **Descrição Editorial:**  
+  *A pureza cristalina de um céu límpido capturada em semijoia. A lapidação oval multifacetada no vibrante tom Topázio Swiss Blue reflete faixas intensas de luz, sustentada por garras clássicas e delicadas banhadas em ródio nobre. Um conjunto atemporal, fresco e incrivelmente elegante.*
+* **Especificações Técnicas:**
+  * Banho nobre em Ródio Branco
+  * Zircônias ovais premium cor Topázio Swiss Blue
+  * Cravação tradicional em 4 garras de alta segurança
+  * Hipoalergênico e níquel-free
+* **Referência:** `REF: FM-2057-TB`
+* **Preço Sugerido:** `R$ 138,00` *(ou 3x de R$ 46,00 sem juros)*
 
 ---
 

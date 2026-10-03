@@ -26,3 +26,6 @@ if (typeof window.supabase !== 'undefined' && SUPABASE_CONFIG.url && SUPABASE_CO
     console.warn('Erro ao conectar com o Supabase:', err);
   }
 }
+
+window.SUPABASE_CONFIG = SUPABASE_CONFIG;
+window.supabaseClient = supabaseClient;

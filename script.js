@@ -24,8 +24,9 @@ function setupFilters() {
       const productCards = document.querySelectorAll('.product-card');
 
       productCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filter === 'todos' || category === filter) {
+        const category = card.getAttribute('data-category') || '';
+        const categories = category.split(' ');
+        if (filter === 'todos' || categories.includes(filter)) {
           card.style.display = 'flex';
           card.style.animation = 'fadeIn 0.35s ease';
         } else {
@@ -102,6 +103,26 @@ const productsData = {
     title: 'Conjunto Coração Imperial Perolado',
     ref: 'REF: FM-2053-CP | Banho Ouro 18k | R$ 298,00',
     img: 'images/conjunto-coracao-cushion-perolado.jpg'
+  },
+  'modal-quadrado-negro': {
+    title: 'Conjunto Noir Cushion Dourado',
+    ref: 'REF: FM-2054-ON | Banho Ouro 18k | R$ 168,00',
+    img: 'images/conjunto-quadrado-pave-negro.jpg'
+  },
+  'modal-circulo-solar': {
+    title: 'Conjunto Mandala Sol Radiante',
+    ref: 'REF: FM-2055-SL | Banho Ouro 18k | R$ 158,00',
+    img: 'images/conjunto-circulo-pave-radiante.jpg'
+  },
+  'modal-octogonal-london': {
+    title: 'Conjunto Octogonal London Blue Art Déco',
+    ref: 'REF: FM-2056-LB | Banho Ródio Branco | R$ 189,00',
+    img: 'images/conjunto-octogonal-london-blue.jpg'
+  },
+  'modal-solitario-topazio': {
+    title: 'Conjunto Solitário Topázio Swiss',
+    ref: 'REF: FM-2057-TB | Banho Ródio Branco | R$ 138,00',
+    img: 'images/conjunto-solitario-topazio-swiss.jpg'
   }
 };
 
@@ -129,6 +150,10 @@ function closeModal() {
     document.body.style.overflow = 'auto';
   }
 }
+
+// Expõe para o escopo global (compatibilidade com onclick nos cards HTML e módulos)
+window.openModal = openModal;
+window.closeModal = closeModal;
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();

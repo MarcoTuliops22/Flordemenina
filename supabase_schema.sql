@@ -49,7 +49,7 @@ CREATE POLICY "Imagens de acesso publico"
 ON storage.objects FOR SELECT
 USING (bucket_id = 'catalogo');
 
--- 6. INSERÇÃO DOS 13 PRODUTOS DO CATÁLOGO (SEED COM PREÇOS ATUALIZADOS)
+-- 6. INSERÇÃO DOS 17 PRODUTOS DO CATÁLOGO (SEED COM PREÇOS ATUALIZADOS)
 INSERT INTO public.produtos (ref, nome, subtitulo, categoria, descricao, specs, preco, parcelas, imagem_url, badge, badge_classe, ordem)
 VALUES
 (
@@ -233,6 +233,62 @@ VALUES
     'Alta Joalheria Afetiva',
     'accent-gold',
     13
+),
+(
+    'FM-2054-ON',
+    'Conjunto Noir Cushion Dourado',
+    'Colar com Pingente Cushion + Brincos Quadrados Pavê Negro',
+    'organicos',
+    'O encontro magnético entre o calor do ouro 18k e a intensidade do ônix negro. Pingente e brincos em formato quadrado com cantos suaves arredondados (cushion), densamente cravejados com microzircônias negras de brilho facetado e moldura dourada polida.',
+    ARRAY['Banho Ouro 18k', 'Micro Pavê Black Spinel', 'Design Cushion Nobre'],
+    168.00,
+    'ou até 3x de R$ 56,00 sem juros',
+    'images/conjunto-quadrado-pave-negro.jpg',
+    'Destaque Noir',
+    'accent-gold',
+    14
+),
+(
+    'FM-2055-SL',
+    'Conjunto Mandala Sol Radiante',
+    'Colar Corrente Box + Brincos Redondos Pavê Cristais',
+    'organicos',
+    'Uma celebração à luz e ao brilho eterno do sol. O pingente e os brincos circulares abaulados trazem um pavê cintilante de microzircônias incolores, contornados por delicadas pontas e esferas douradas em relevo raiado. Luminosidade pura e acolhedora.',
+    ARRAY['Banho Ouro 18k', 'Micro Pavê de Cristais', 'Corrente Veneziana Box'],
+    158.00,
+    'ou até 3x de R$ 52,66 sem juros',
+    'images/conjunto-circulo-pave-radiante.jpg',
+    'Brilho Radiante',
+    'accent-gold',
+    15
+),
+(
+    'FM-2056-LB',
+    'Conjunto Octogonal London Blue',
+    'Anel Majestoso + Brincos Octagonais com Halo de Baguetes',
+    'rodio',
+    'A suntuosidade dos tesouros reais em estilo Art Déco. A imponente gema octogonal central em tom azul London profundo é cercada por uma auréola arquitetônica de zircônias lapidadas em baguetes e brilhantes, banhadas no mais puro ródio branco.',
+    ARRAY['Banho Ródio Branco', 'Cristal London Blue', 'Halo Cravejado Baguetes'],
+    189.00,
+    'ou até 3x de R$ 63,00 sem juros',
+    'images/conjunto-octogonal-london-blue.jpg',
+    'Alta Joalheria Art Déco',
+    'accent-blue',
+    16
+),
+(
+    'FM-2057-TB',
+    'Conjunto Solitário Topázio Swiss',
+    'Anel Solitário Oval + Brincos Solitários 4 Garras',
+    'rodio',
+    'O frescor e a clareza do céu límpido refletidos em lapidação oval de máxima refração. A zircônia na tonalidade Topázio Swiss Blue brilha com nitidez absoluta sob as 4 garras clássicas em banho de ródio branco. O solitário clássico para um brilho leve e sofisticado.',
+    ARRAY['Banho Ródio Branco', 'Zircônia Topázio Swiss', 'Hipoalergênico'],
+    138.00,
+    'ou até 3x de R$ 46,00 sem juros',
+    'images/conjunto-solitario-topazio-swiss.jpg',
+    'Azul Celeste Nobre',
+    'accent-blue',
+    17
 )
 ON CONFLICT (ref) DO UPDATE SET
     nome = EXCLUDED.nome,
